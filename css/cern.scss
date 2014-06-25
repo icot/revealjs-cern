@@ -1,0 +1,44 @@
+/**
+ *
+ * CERN theme for reveal.js, based on the original Black theme.
+ * Changes import paths to use the default ones distributed with reveal.js
+ * and defines CERN charasteric colors.
+ *
+ * Black theme Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * 
+ * Copyright(C) 2014 Ignacio Coterillo, http://icot.github.io
+ * 
+ */
+
+
+// Default mixins and settings -----------------
+@import "../../css/theme/template/mixins";
+@import "../../css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #ffffff;
+$cernBlueWEB: #3861aa;
+$cernBlue: #0053A1;
+
+$mainFont: 'Open Sans', sans-serif;
+$mainColor: $cernBlue;
+$linkColor: darken($cernBlue, 20%);
+$headingFont: 'Montserrat', Impact, sans-serif;
+$headingColor: $cernBlue;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #e7ad52;
+$mainFontSize: 30px;
+
+
+// Theme template ------------------------------
+@import "../../css/theme/template/theme";
+// ---------------------------------------------
