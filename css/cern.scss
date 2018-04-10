@@ -4,16 +4,16 @@
  * Changes import paths to use the default ones distributed with reveal.js
  * and defines CERN charasteric colors.
  *
- * Black theme Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Black theme Copyright (C) 2011-2018 Hakim El Hattab, http://hakim.se
  * 
- * Copyright(C) 2014 Ignacio Coterillo, http://icot.github.io
+ * Copyright(C) 2018 Ignacio Coterillo, http://icot.github.io
  * 
  */
 
 
 // Default mixins and settings -----------------
-@import "../../css/theme/template/mixins";
-@import "../../css/theme/template/settings";
+@import "mixins";
+@import "settings";
 // ---------------------------------------------
 
 
@@ -38,7 +38,48 @@ $headingTextTransform: none;
 $selectionBackgroundColor: #e7ad52;
 $mainFontSize: 30px;
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#footerBar {
+    color: white;
+    height: 120px;
+    background: #0053A1; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -1
+}
+
+#CERNlogoFooter {
+    margin-left: 20px;
+    margin-top: 20px;
+    content: url(../images/LogoBadge-01.png);
+    width: 80px;
+    height: 80px;
+    background: white;
+    float: left;
+}
+
+#footerText {
+    font-size: smaller; 
+    float: left;
+    /* There surely must be a better way of placing this text*/
+    margin-left: 20%; 
+    margin-top: 3.1%;
+}
+
+div.CERNlogoCentered {
+    content: url(../images/LogoBadge-02.png);
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 // Theme template ------------------------------
-@import "../../css/theme/template/theme";
+@import "theme";
 // ---------------------------------------------
+
+
